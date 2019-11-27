@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org.//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatiis-3-mapper.dtd" >
+<mapper namespace="com.summer.business.dao.EmployeeMapper">
+    <resultMap id="BaseResultMap" type="com.summer.business.core.bean.Employee">
+        <id id="id" property="id" jdbcType="INTEGER" />
+        <result column="name" property="name" jdbcType="VARCHAR" />
+        <result column="age" property="age" jdbcType="INTEGER" />
+    </resultMap>
+
+    <insert id="insert" parameterType="com.summer.business.core.bean.Employee">
+        insert into t_employee(id,name,age) values (#{id,jdbcType=INTEGER},#{name,jdbcType=VARCHAR}, #{age,jdbcType=INTEGER})
+    </insert>
+
+    <update id="updateEmployee" parameterType="com.summer.business.core.bean.Employee">
+        update t_employee
+        set name = #{name,jdbcType=VARCHAR},
+        age = #{age, jdbcType=INTEGER},
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+
+    <delete id="removeEmployeeById" parameterType="java.lang.Integer">
+        delete from t_employee where id = #{id, jdbcType="INTEGER"}
+    </delete>
+
+    <select id="queryAll" resultMap="BaseResultMap">
+        select id,name,age from t_employee
+    </select>
+
+    <select id="selectEmployeeById" parameterType="java.lang.Integer" resultMap="com.summer.business.core.bean.Employee">
+        select id, name, age from t_employee where id = #{id, jdbcType=INTEGER}
+    </select>
+
+</mapper>    
