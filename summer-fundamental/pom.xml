@@ -3,20 +3,19 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <dependencies>
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-        </dependency>
-    </dependencies>
 
     <parent>
         <groupId>com.summer</groupId>
-        <artifactId>summer-business</artifactId>
+        <artifactId>summer</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>summer-business-core</artifactId>
+    <artifactId>summer-fundamental</artifactId>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>summer-fundamental-druid</module>
+    </modules>
 
 
     
