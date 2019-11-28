@@ -8,11 +8,11 @@
     </resultMap>
 
     <insert id="insert" parameterType="com.summer.business.core.bean.Employee">
-        insert into t_employee(id,name,age) values (#{id,jdbcType=INTEGER},#{name,jdbcType=VARCHAR}, #{age,jdbcType=INTEGER})
+        insert into employee(id,name,age) values (#{id,jdbcType=INTEGER},#{name,jdbcType=VARCHAR}, #{age,jdbcType=INTEGER})
     </insert>
 
     <update id="updateEmployee" parameterType="com.summer.business.core.bean.Employee">
-        update t_employee
+        update employee
         set name = #{name,jdbcType=VARCHAR},
         age = #{age, jdbcType=INTEGER},
         where id = #{id,jdbcType=INTEGER}
@@ -23,11 +23,11 @@
     </delete>
 
     <select id="queryAll" resultMap="BaseResultMap">
-        select id,name,age from t_employee
+        select id,name,age from employee
     </select>
 
     <select id="selectEmployeeById" parameterType="java.lang.Integer" resultMap="com.summer.business.core.bean.Employee">
-        select id, name, age from t_employee where id = #{id, jdbcType=INTEGER}
+        select id, name, age from employee where id = #{id, jdbcType=INTEGER}
     </select>
 
 </mapper>    
