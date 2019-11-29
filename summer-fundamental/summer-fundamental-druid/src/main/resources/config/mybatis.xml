@@ -26,5 +26,9 @@
             </dataSource>
         </environment>
     </environments>
+    
+    <mappers>
+        <mapper class="com.summer.business.dao.EmployeeMapper" />
+    </mappers>
 </configuration>
 

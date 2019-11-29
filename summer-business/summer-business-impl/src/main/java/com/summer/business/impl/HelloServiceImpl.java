@@ -3,7 +3,7 @@ package com.summer.business.impl;
 import com.summer.business.core.bean.Employee;
 import com.summer.business.core.service.HelloService;
 import com.summer.business.dao.EmployeeMapper;
-import org.springframework.stereotype.Component;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 @Service("helloService")
 public class HelloServiceImpl implements HelloService {
 
+    @Autowired
     private EmployeeMapper employeeMapper;
 
     @Override

@@ -6,19 +6,10 @@
 
     <parent>
         <groupId>com.summer</groupId>
-        <artifactId>summer</artifactId>
+        <artifactId>summer-fundamental</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>summer-fundamental</artifactId>
-    <packaging>pom</packaging>
-
-    <modules>
-        <module>summer-fundamental-druid</module>
-        <module>summer-fundamental-config</module>
-        <module>summer-fundamental-dubbo</module>
-    </modules>
-
-
+    <artifactId>summer-fundamental-dubbo</artifactId>
     
 </project>
