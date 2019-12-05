@@ -18,6 +18,7 @@
         <module>summer-business-api</module>
         <module>summer-business-core</module>
         <module>summer-business-impl</module>
+        <module>summer-business-employee</module>
     </modules>
 
     <dependencies>
