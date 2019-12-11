@@ -23,6 +23,7 @@ public class StreamTest {
 
         List<String> list = Arrays.asList("1","23","45");
         System.out.println(list.stream().mapToInt(i->Integer.parseInt(i)).summaryStatistics().getMax());
+
 //
 //        Map<String,String> users = new HashMap<>();
 //        Map<String,String> dbs= new HashMap<>();
