@@ -1,3 +1,4 @@
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.*;
@@ -23,7 +24,6 @@ public class StreamTest {
 
         List<String> list = Arrays.asList("1","23","45");
         System.out.println(list.stream().mapToInt(i->Integer.parseInt(i)).summaryStatistics().getMax());
-
 //
 //        Map<String,String> users = new HashMap<>();
 //        Map<String,String> dbs= new HashMap<>();
@@ -38,4 +38,13 @@ public class StreamTest {
 //        });
 
     }
+
+    @Test
+    public void testOrder(){
+        List<Integer> list = Arrays.asList(4,3,2,1);
+        HashSet<Integer> hashSet = new HashSet<>(list);
+        Assert.assertEquals(list.stream().collect(Collectors.toList()),list);
+        Assert.assertEquals(hashSet.stream().collect(Collectors.toList()), list);
+    }
+
 }
