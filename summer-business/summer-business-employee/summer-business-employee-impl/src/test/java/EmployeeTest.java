@@ -1,3 +1,4 @@
+import com.summer.business.employee.core.service.EmployeeService;
 import com.summer.business.employee.dao.EmployeeMapper;
 import com.summer.fundamental.druid.Starter;
 import org.junit.Test;
@@ -23,7 +24,7 @@ public class EmployeeTest {
     DataSource dataSource;
 
     @Autowired
-    EmployeeMapper employeeMapper;
+    EmployeeService employeeService;
 
     @Test
     public void testEmployee() throws SQLException {
@@ -46,6 +47,6 @@ public class EmployeeTest {
 //        } catch (Exception e) {
 //            e.printStackTrace();
 //        }
-        System.out.println(employeeMapper.queryAll().toString());
+        System.out.println(employeeService.queryAll().toString());
     }
 }

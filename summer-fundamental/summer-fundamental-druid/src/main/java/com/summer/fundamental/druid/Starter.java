@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ImportResource;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "com.summer")
 @ImportResource("classpath*:applicationContext-*.xml")
 @MapperScan("com.summer.business.*.dao")
 public class Starter {
