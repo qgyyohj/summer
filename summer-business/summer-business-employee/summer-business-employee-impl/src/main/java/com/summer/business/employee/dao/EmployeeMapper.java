@@ -1,12 +1,16 @@
 package com.summer.business.employee.dao;
 
 import com.summer.business.employee.core.bean.Employee;
+import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 /**
  * @author yuzhuozhang
  */
+@Mapper
+@Repository
 public interface EmployeeMapper {
 
     /**

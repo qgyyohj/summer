@@ -3,12 +3,18 @@ import org.junit.runner.RunWith;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
+import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
+import org.springframework.core.io.support.ResourcePatternResolver;
 import org.springframework.test.context.junit4.SpringRunner;
 import com.summer.fundamental.druid.Starter;
 
 import javax.sql.DataSource;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.Arrays;
 
 @SpringBootTest(classes= Starter.class)
 @RunWith(SpringRunner.class)
@@ -16,17 +22,14 @@ public class SpringbootJdbcConnectionTest {
     @Autowired
     DataSource dataSource;
 
-    @Autowired
-    SqlSessionFactoryBean sqlSessionFactoryBean;
+    SqlSessionFactoryBean SqlSessionFactoryBean;
+
     @Test
     public void contextLoad() throws SQLException{
         System.out.println("dataSource: " + dataSource.getClass());
         Connection connection = dataSource.getConnection();
         System.out.println("connection: " + connection);
 
-
-        sqlSessionFactoryBean.setDataSource(dataSource);
-        sqlSessionFactoryBean.setMapperLocations(null);
 
 //        Statement statement=dataSource.getConnection().createStatement();
 //        String sql = "select * from employee;";

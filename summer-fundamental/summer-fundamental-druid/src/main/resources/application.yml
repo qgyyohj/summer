@@ -34,3 +34,8 @@ spring:
     #不知道啥意思，官网都是这么给的，先抄下来吧，等出错了估计就知道这两条啥意思了
     keepAlive: true
     phyMaxUseCount: 1000
+
+mybatis:
+  datasource: datasource
+  type-aliases-package: com.summer.business.*.core.bean
+  mapper-locations: classpath*:config/mappers/*.xml

@@ -19,5 +19,13 @@
         <module>summer-business-employee-impl</module>
     </modules>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.summer</groupId>
+            <artifactId>summer-fundamental-druid</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
     
 </project>
