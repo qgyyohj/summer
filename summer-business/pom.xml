@@ -16,6 +16,7 @@
 
     <modules>
         <module>summer-business-employee</module>
+        <module>summer-business-api</module>
     </modules>
 
     <dependencies>

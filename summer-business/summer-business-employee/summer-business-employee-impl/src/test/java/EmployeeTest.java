@@ -1,6 +1,6 @@
 import com.summer.business.employee.core.service.EmployeeService;
 import com.summer.business.employee.dao.EmployeeMapper;
-import com.summer.fundamental.druid.Starter;
+import com.summer.Starter;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mybatis.spring.SqlSessionFactoryBean;
@@ -20,8 +20,8 @@ import java.sql.SQLException;
 @RunWith(SpringRunner.class)
 public class EmployeeTest {
 
-    @Autowired
-    DataSource dataSource;
+//    @Autowired
+//    DataSource dataSource;
 
     @Autowired
     EmployeeService employeeService;

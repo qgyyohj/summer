@@ -1,0 +1,16 @@
+spring:
+  dubbo:
+    application:
+      name: summer-provider
+    registry:
+      address: zookeeper://127.0.0.1:2181
+      subscribe: falses
+      check: false
+    protocol:
+      name: dubbo
+      port: 20880
+    service:
+      loadbalance: leastactive
+      timeout: 5000
+      retries: 0
+    scan: com.summer.business.*.core.service

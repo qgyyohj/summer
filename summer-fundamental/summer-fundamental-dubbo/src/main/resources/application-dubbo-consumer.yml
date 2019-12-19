@@ -1,0 +1,12 @@
+spring:
+  dubbo:
+    application:
+      name: summer-consumer
+    registry:
+      address: zookeeper://127.0.0.1:2181
+    protocol:
+      name: dubbo
+      port: 20880
+    reference:
+      check: false
+    scan: com.summer.business.*.core.service
