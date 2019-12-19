@@ -1,17 +1,17 @@
 package com.summer.business.employee.service.impl;
 
+import com.alibaba.dubbo.config.annotation.Service;
 import com.summer.business.employee.core.bean.Employee;
 import com.summer.business.employee.core.service.EmployeeService;
 import com.summer.business.employee.dao.EmployeeMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 /**
  * @author yuzhuozhang
  */
-@Service("employeeService")
+@Service(interfaceClass = EmployeeService.class)
 public class EmployeeServiceImpl implements EmployeeService {
 
     @Autowired

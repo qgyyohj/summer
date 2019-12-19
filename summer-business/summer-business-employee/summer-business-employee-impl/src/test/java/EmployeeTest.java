@@ -1,19 +1,12 @@
 import com.summer.business.employee.core.service.EmployeeService;
+import com.summer.business.Starter;
 import com.summer.business.employee.dao.EmployeeMapper;
-import com.summer.Starter;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mybatis.spring.SqlSessionFactoryBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.core.io.Resource;
-import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
-import org.springframework.core.io.support.ResourcePatternResolver;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import javax.sql.DataSource;
-import java.io.IOException;
-import java.sql.Connection;
 import java.sql.SQLException;
 
 @SpringBootTest(classes=Starter.class)
@@ -24,7 +17,7 @@ public class EmployeeTest {
 //    DataSource dataSource;
 
     @Autowired
-    EmployeeService employeeService;
+    EmployeeMapper employeeMapper;
 
     @Test
     public void testEmployee() throws SQLException {
@@ -47,6 +40,6 @@ public class EmployeeTest {
 //        } catch (Exception e) {
 //            e.printStackTrace();
 //        }
-        System.out.println(employeeService.queryAll().toString());
+        System.out.println(employeeMapper.queryAll().toString());
     }
 }

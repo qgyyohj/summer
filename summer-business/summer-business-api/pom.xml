@@ -18,6 +18,11 @@
             <artifactId>summer-fundamental-druid</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>com.summer</groupId>
+            <artifactId>summer-fundamental-dubbo</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     

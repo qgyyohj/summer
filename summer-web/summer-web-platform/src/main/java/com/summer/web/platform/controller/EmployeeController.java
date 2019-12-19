@@ -34,8 +34,7 @@ public class EmployeeController {
     public String sayHello(String name){
         try{
             System.out.println("欢迎语句："+name);
-            return "欢迎语句："+name;
-            //employeeService.sayHello(name);
+            return employeeService.sayHello(name);
         }catch (Exception e){
             System.out.println(ExceptionUtils.getStackTrace(e));
             return null;

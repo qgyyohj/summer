@@ -8,9 +8,12 @@ spring:
       check: false
     protocol:
       name: dubbo
+      # 服务的端口号，之后的应用可以每个服务区分一下
       port: 20880
     service:
       loadbalance: leastactive
       timeout: 5000
       retries: 0
-    scan: com.summer.business.*.core.service
+    server: true
+    scan:
+      basePackages: com.summer.business.*
