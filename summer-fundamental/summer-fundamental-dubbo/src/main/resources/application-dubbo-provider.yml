@@ -1,19 +1,18 @@
 spring:
   dubbo:
     application:
+      id: summer-provider
       name: summer-provider
     registry:
       address: zookeeper://127.0.0.1:2181
-      subscribe: falses
-      check: false
     protocol:
       name: dubbo
       # 服务的端口号，之后的应用可以每个服务区分一下
-      port: 20880
+      port: 20882
     service:
       loadbalance: leastactive
       timeout: 5000
       retries: 0
     server: true
     scan:
-      basePackages: com.summer.business.*
+      base-packages: com.summer.business

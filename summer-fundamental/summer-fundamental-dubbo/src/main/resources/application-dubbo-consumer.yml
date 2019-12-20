@@ -6,7 +6,7 @@ spring:
       address: zookeeper://127.0.0.1:2181
     protocol:
       name: dubbo
-      port: 20880
+      port: 20881
     reference:
       check: false
-    scan: com.summer.business.*.core.service
+    scan: com.summer.business
