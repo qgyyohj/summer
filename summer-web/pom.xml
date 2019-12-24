@@ -18,7 +18,11 @@
     </modules>
 
     <dependencies>
-
+        <dependency>
+            <groupId>com.summer</groupId>
+            <artifactId>summer-business-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
     
 </project>

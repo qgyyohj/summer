@@ -1,6 +1,6 @@
-import com.summer.business.employee.core.service.EmployeeService;
-import com.summer.business.Starter;
+import com.summer.AppStart;
 import com.summer.business.employee.dao.EmployeeMapper;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +9,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import java.sql.SQLException;
 
-@SpringBootTest(classes=Starter.class)
+@SpringBootTest(classes= AppStart.class)
 @RunWith(SpringRunner.class)
 public class EmployeeTest {
 
