@@ -1,3 +1,3 @@
 spring:
   profiles:
-    active: [druid,dubbo-provider,dubbo-consumer]
+    active: [druid,dubbo-provider]

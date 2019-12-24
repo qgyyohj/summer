@@ -3,3 +3,7 @@ server:
 spring:
   profiles:
     active: [dubbo-provider,druid,dubbo-consumer]
+  dubbo:
+    application:
+      id: summer
+      name: summer
